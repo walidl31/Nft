@@ -1,0 +1,174 @@
+.splash {
+    height: 100vh;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient(circle at 50%, transparent 60%, rgba(0, 0, 0, .35) 160%), radial-gradient(circle at 50%, #dbdcdc 40%, #acacac 140%);;
+}
+
+.logo {
+    width: 30rem;
+    margin-bottom: 20px;
+}
+@media (max-width: 900px){
+    .logo {
+        width: 19rem;
+    }
+}
+.load {
+    width: 5rem;
+}
+.splash h1{
+  font-family: Japanese;
+  font-size: clamp(40px, 10vw, 100px);
+  line-height: 1;
+  display: inline-block;
+  color: #fff;
+  z-index: 2;
+  letter-spacing: 10px;
+  /* Bright things in dark environments usually cast that light, giving off a glow */
+  filter: drop-shadow(0 1px 3px);
+
+  
+}
+
+.splash h1 {
+    position: relative;
+}
+  
+.splash h1::before,
+.splash h1::after {
+  content: attr(data-text);
+  position: absolute;
+  width: 110%;
+  z-index: -1;
+}
+
+
+
+.splash h1::after {
+  top: 5px;
+  left: -10px;
+  color: #1bc7fb;
+}
+  
+.splash button {
+  font-family: Japanese;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: #ccc;
+  border: 1px solid #000;
+}
+.splash button:hover {
+  background-color: #e5e5e5;
+}
+
+
+.splash h1::before {
+  animation: paths 5s step-end infinite, opacity 5s step-end infinite,
+    font 8s step-end infinite, movement 10s step-end infinite;
+}
+  
+.splash h1::after {
+  animation: paths 5s step-end infinite, opacity 5s step-end infinite,
+    font 7s step-end infinite, movement 8s step-end infinite;
+}
+.splash h1 span {
+  animation: paths 5s step-end infinite;
+}
+
+@keyframes movement {
+  0% {
+    top: 0px;
+    left: -20px;
+  }
+
+  15% {
+    top: 10px;
+    left: 10px;
+  }
+
+  60% {
+    top: 5px;
+    left: -10px;
+  }
+
+  75% {
+    top: -5px;
+    left: 20px;
+  }
+
+  100% {
+    top: 10px;
+    left: 5px;
+  }
+}
+
+.opacity {
+  animation: opacity 5s step-end infinite;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0.1;
+  }
+
+  5% {
+    opacity: 0.7;
+  }
+
+  30% {
+    opacity: 0.4;
+  }
+
+  45% {
+    opacity: 0.6;
+  }
+
+  76% {
+    opacity: 0.4;
+  }
+
+  90% {
+    opacity: 0.8;
+  }
+
+  1%,
+  7%,
+  33%,
+  47%,
+  78%,
+  93% {
+    opacity: 0;
+  }
+}
+
+.font {
+  animation: font 7s step-end infinite;
+}
+
+@keyframes font {
+
+
+  20% {
+    font-weight: 500;
+    color: #fff;
+    filter: blur(0);
+  }
+
+  50% {
+    font-weight: 300;
+    color: #1bc7fb;
+    filter: blur(2px);
+  }
+
+  60% {
+    font-weight: 700;
+    color: #fff;
+    filter: blur(0);
+  }
+}
+  
