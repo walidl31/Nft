@@ -2,16 +2,15 @@
     font-family: myfont;
     src: url(Days.ttf);
 }
-
 .header {
     height: 100vh;
     min-width: 100%;
+    /* background-image: linear-gradient(180deg, transparent 50%, var(--bg-color-3)), url(/media/bgmoon.webp); */
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
     position: relative;
 }
-
 .background {
     background-image: linear-gradient(180deg, transparent 50%, var(--bg-color-3)), url(/media/Header.webp);
     background-color: #ccc;
@@ -21,17 +20,17 @@
     text-align: center;
     width: 100%;
     height: 100%;
+    /* transform: scale(1.25, 1.25); filter: brightness(2); */
 }
-
 .landingText {
     position: absolute;
     top: 50%;
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 100%;
     text-align: center;
 }
-
-.landingText h1 {
+.landingText h1{
     margin: 0;
     padding-top: 650px;
     text-align: center;
@@ -39,28 +38,31 @@
     font-family: myfont;
     color: wheat;
     letter-spacing: 0.5rem;
+    /* text-shadow: -1px -1px 0 #3c070d, 1px -1px 0 #3c070d, -1px 1px 0 #3c070d, 2px 2px 0 #3c070d; */
+    /* filter: drop-shadow(5px 5px 0px #000);    */
 }
-
-@media (max-width: 768px) {
-    .landingText h1 {
+@media (max-width: 768px){
+    .landingText h1{
         font-size: 3rem;
-        padding-top: 20vh; /* Adjusted padding for smaller screens */
-    }
+    }    
 }
-
-.landingText p {
+.landingText p{
     margin: 0;
     text-align: center;
     font-size: 1.5rem;
     font-weight: 300;
     letter-spacing: 1.8px;
+    text-align: center;
     color: #fff;
+    /* text-shadow: -1px -1px 0 #3c070d, 1px -1px 0 #3c070d, -1px 1px 0 #3c070d, 2px 2px 0 #3c070d; */
+    /* filter: drop-shadow(5px 5px 0px #000);    */
 }
-
 .headerContainer {
+    height: -webkit-max-content;
     height: max-content;
     justify-content: center !important;
     align-items: center !important;
+    /* display: flex; */
     flex-direction: column;
     margin: auto;
 }
@@ -68,6 +70,7 @@
 .mainLogo {
     width: 50%;
     margin-top: 30vh;
+    -webkit-animation: page-load 1969ms cubic-bezier(0.04, 1.2, 1, 0.94);
     animation: page-load 1969ms cubic-bezier(0.04, 1.2, 1, 0.94);
 }
 
@@ -78,11 +81,14 @@
     text-shadow: -1px -1px 0 #3c070d, 1px -1px 0 #3c070d, -1px 1px 0 #3c070d, 2px 2px 0 #3c070d;
     font-size: 3rem;
 }
-
 .buyBtn {
     padding: 20px 20px 20px 55px;
     border-radius: 5px;
     background-color: #2081e2;
+    background-position: 10px 50%;
+    background-size: auto 50%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
     font-family: Upheavtt;
     font-weight: 700;
     color: white;
@@ -93,7 +99,56 @@
     display: inline-block;
 }
 
-.sumurai1, .sumurai2, .sumurai3, .sumurai4, .sumurai5, .sumurai6, .sumurai7 {
+.sumurai1 {
+    width: 300px;
+    height: 300px;
+    bottom: 10%;
+    left: 25%;
+    background-image: url(/media/moon_1.webp);
+}
+.sumurai2 {
+    width: 250px;
+    height: 250px;
+    bottom: 15%;
+    left: 45%;
+    background-image: url(/media/moon_2.webp);
+}
+.sumurai3 {
+    width: 300px;
+    height: 300px;
+    bottom: 40px;
+    left: 63%;
+    background-image: url(/media/moon_3.webp);
+}
+.sumurai4 {
+    width: 250px;
+    height: 300px;
+    bottom: 20px;
+    left: 57%;
+    background-image: url(/media/moon_4.webp);
+}
+.sumurai5 {
+    width: 270px;
+    height: 270px;
+    bottom: 30px;
+    left: 17%;
+    background-image: url(/media/moon_5.webp);
+}
+.sumurai6 {
+    width: 270px;
+    height: 270px;
+    bottom: 30px;
+    left: 30%;
+    background-image: url(/media/moon_6.webp);
+}
+.sumurai7 {
+    width: 300px;
+    bottom: 10px;
+    height: 300px;
+    left: 40%;
+    background-image: url(/media/moon_7.webp);
+}
+.sumurai {
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat;
@@ -101,21 +156,144 @@
     filter: contrast(0%) brightness(10%);
     transition: all 0.2s ease-in-out;
 }
+.sumurai1:hover {
+    filter: none;
+    transform: scale(1.1);
 
-.sumurai1:hover, .sumurai2:hover, .sumurai3:hover, .sumurai4:hover, .sumurai5:hover, .sumurai6:hover, .sumurai7:hover {
+}
+.sumurai2:hover {
+    filter: none;
+    transform: scale(1.1);
+
+}
+.sumurai3:hover {
+    filter: none;
+    transform: scale(1.1);
+
+}
+.sumurai4:hover {
+    filter: none;
+    transform: scale(1.1);
+
+}
+.sumurai5:hover {
+    filter: none;
+    transform: scale(1.1);
+
+}
+.sumurai6:hover {
+    filter: none;
+    transform: scale(1.1);
+
+}
+.sumurai7:hover {
     filter: none;
     transform: scale(1.1);
 }
-
-/* Responsiveness for samurais */
-@media (max-width: 768px) {
-    .sumurai1, .sumurai2, .sumurai3, .sumurai4, .sumurai5, .sumurai6, .sumurai7 {
-        width: 200px;
-        height: 200px;
+.sumurai:hover:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    background-image: inherit;
+    transform: translateX(10px);
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    background-blend-mode: difference;
+}
+.sumurai:hover:before{
+    animation-name: glichAnim1;
+}
+.sumurai:hover:after{
+    animation-name: glichAnim2;
+}
+@keyframes glichAnim1 {
+    0%, 25.1%, 100%{
+        clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    }
+    4%{
+        clip-path: polygon(0 0, 100% 0, 100% 10%, 0 10%);
+    }
+    5%{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    9%{
+        clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
+    }
+    10%{
+        clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
+    }
+    14%{
+        clip-path: polygon(0 40%, 100% 40%, 100% 50%, 0 50%);
+    }
+    15%{
+        clip-path: polygon(0 40%, 100% 40%, 100% 40%, 0 40%);
+    }
+    19%{
+        clip-path: polygon(0 60%, 100% 60%, 100% 70%, 0 70%);
+    }
+    20%{
+        clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+    }
+    24%{
+        clip-path: polygon(0 80%, 100% 80%, 100% 90%, 0 90%);
+    }
+    25%{
+        clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
     }
 }
+@keyframes glichAnim2 {
+    0%, 25.1%, 100%{
+        clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    }
+    4%{
+        clip-path: polygon(0 80%, 100% 80%, 100% 90%, 0 90%);
+        background-color: rgba(0,0 255, 0.2);
+    }
+    5%{
+        clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+        background-color: transparent;
 
-/* Additional Media Queries can be added here for further responsiveness */
+    }
+    9%{
+        clip-path: polygon(0 60%, 100% 60%, 100% 70%, 0 70%);
+    }
+    10%{
+        clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+    }
+    14%{
+        clip-path: polygon(0 40%, 100% 40%, 100% 50%, 0 50%);
+    }
+    15%{
+        clip-path: polygon(0 40%, 100% 40%, 100% 40%, 0 40%);
+    }
+    19%{
+        clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
+    }
+    20%{
+        clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
+    }
+    24%{
+        clip-path: polygon(0 0, 100% 0, 100% 10%, 0 10%);
+    }
+    25%{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+} 
+
+
+
+
+
+
+
+
+
 
 .headerSocials {
     position: absolute;
@@ -123,35 +301,47 @@
     bottom: 25px;
     right: 30px;
 }
-
 .socialsWrapper {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: max-content;
 }
-
 .socialLink {
+    position: relative;
     margin-bottom: 8px;
     width: 50px;
     height: 50px;
     overflow: hidden;
     border: 2px solid #f3f3f3;
     display: flex;
+    -webkit-box-align: center;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease-in-out;
     border-radius: 0.375rem;
 }
-
 .socialLink:hover {
     background-color: wheat;
 }
-
 .socialLink svg {
+    stroke: currentColor;
     fill: #f3f3f3;
     width: 22px;
     height: 22px;
+    /* fill: #fff; */
+    stroke: transparent
+}
+.socialLink img {
+    /* background-color: var(--bg-color); */
+    border: 1px solid #f3f3f3;
+    border-radius: 10%;
+    width: 1000%;
+    margin-left: 170%;
+    height: 100%;
+    padding: 3px;
 }
 
 .arrow {
@@ -164,17 +354,33 @@
 
 .arrow svg {
     color: #fff;
+    font-size: 3.4rem;
+    -webkit-animation: arrow_bounce 1.8s infinite;
+    -o-animation: arrow_bounce 1.8s infinite;
     animation: arrow_bounce 1.8s infinite;
+    display: inline-block;
+    fill: currentColor;
+    height: 1.2em;
+    width: 1.2em;
+    vertical-align: middle;
+    position: relative;
+    top: -0.0625em;
 }
 
 @keyframes arrow_bounce {
-    0%, 20%, 50%, 80%, 100% {
+    0%, 100%, 20%, 50%, 80% {
+        -webkit-transform: translateY(0);
+        -o-transform: translateY(0);
         transform: translateY(0);
     }
     40% {
+        -webkit-transform: translateY(-30px);
+        -o-transform: translateY(-30px);
         transform: translateY(-30px);
     }
     60% {
+        -webkit-transform: translateY(-15px);
+        -o-transform: translateY(-15px);
         transform: translateY(-15px);
     }
 }
