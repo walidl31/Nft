@@ -5,7 +5,7 @@
 
 .main {
     height: 1VH;
-    padding-bottom: 100px;
+    padding-bottom: 120px;
 }
 .setion2 .two{
 font-family: myfont ;
@@ -16,7 +16,7 @@ white-space: nowrap;
 gap: 70px;
 text-transform: capitalize;
 color: wheat;
-font-size: 1.5vw;
+font-size: calc(1.5vw + 10px); 
 animation: move 8s linear infinite   ;
 
 }
@@ -24,8 +24,23 @@ animation: move 8s linear infinite   ;
     0% {
         transform: translateX(0%);
     }
+    50% {
+        transform: translateX(-50%);
+    }
     100% {
         transform: translateX(100%);
     }
     
 }
+@media screen and (max-width: 768px) {
+    .section2 .two {
+        gap: 40px; /* Smaller gap for smaller screens */
+        font-size: calc(2vw + 10px); /* Adjust font size for better visibility */
+    }
+}
+@media screen and (max-width: 480px) {
+    .section2 .two {
+        gap: 20px; /* Even smaller gap for very small screens */
+        animation-duration: 10s; /* Slower animation for better readability */
+    }
+}   

@@ -22,6 +22,9 @@
   /* --accent-color: rgb(0 117 255); */
   --accent-color-2: #f6b547;
   --text-fade-color: #ccc;
+  --main-bg-color: #333;
+  --primary-color: #4CAF50;
+  --secondary-color: #FFC107;
 }
 
 html,
@@ -35,7 +38,8 @@ body {
   background-attachment: fixed;
   background-repeat: repeat;
   background-size: contain;
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 a {
